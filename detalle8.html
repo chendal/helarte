@@ -7,52 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Galería Urbana</a></h1>
-    <nav>
-<div style="position:relative;">
-  <a href="#" onclick="document.querySelector('#carrito-panel').classList.toggle('visible'); return false;">🛒 <span id="carrito-contador">0</span></a>
-  <div id="carrito-panel" style="display:none; position:absolute; top:2em; right:0; background:#fff; border:1px solid #ccc; padding:1em; z-index:10;">
-    <h4>Carrito</h4>
-    <ul id="carrito-lista"></ul>
+  
+<header style="display:flex; justify-content:space-between; align-items:center; padding:1em 2em; border-bottom:1px solid #ddd;">
+  <h1><a href="index.html" style="font-family: serif; font-size: 2em; letter-spacing: 0.2em; text-decoration:none; color:black;">ALBA</a></h1>
+  <nav>
+    
+<div id="carrito-wrapper" style="position:relative;">
+  <a href="#" id="carrito-toggle" style="text-decoration:none;">🛒 <span id="carrito-contador">0</span></a>
+  <div id="carrito-panel" style="display:none; position:absolute; top:2em; right:0; background:#fff; border:1px solid #ccc; padding:1em; z-index:1000; width:250px;">
+    <h4 style="margin-top:0;">Carrito</h4>
+    <ul id="carrito-lista" style="list-style:none; padding-left:0;"></ul>
   </div>
 </div>
 <script src="carrito.js"></script>
-<script>
-  document.addEventListener('click', function(e) {
-    if (!document.querySelector('#carrito-panel').contains(e.target) &&
-        !e.target.closest('a[href="#"]')) {
-      document.querySelector('#carrito-panel').classList.remove('visible');
-    }
-  });
-  const panel = document.querySelector('#carrito-panel');
-  if (panel) panel.classList.toggle = function (toggle) {
-    this.style.display = this.style.display === 'block' ? 'none' : 'block';
-  };
-</script>
-</nav>
-<div style="position:relative;">
-  <a href="#" onclick="document.querySelector('#carrito-panel').classList.toggle('visible'); return false;">🛒 <span id="carrito-contador">0</span></a>
-  <div id="carrito-panel" style="display:none; position:absolute; top:2em; right:0; background:#fff; border:1px solid #ccc; padding:1em; z-index:10;">
-    <h4>Carrito</h4>
-    <ul id="carrito-lista"></ul>
-  </div>
-</div>
-<script src="carrito.js"></script>
-<script>
-  document.addEventListener('click', function(e) {
-    if (!document.querySelector('#carrito-panel').contains(e.target) &&
-        !e.target.closest('a[href="#"]')) {
-      document.querySelector('#carrito-panel').classList.remove('visible');
-    }
-  });
-  const panel = document.querySelector('#carrito-panel');
-  if (panel) panel.classList.toggle = function (toggle) {
-    this.style.display = this.style.display === 'block' ? 'none' : 'block';
-  };
-</script>
 
-  </header>
+  </nav>
+</header>
+
 
   <section class="detalle">
     <img src="https://tse1.mm.bing.net/th?id=OIP.9KMPBamQuV_xA-EPMTXVmAHaHa&pid=Api" alt="Alba expandida" />
