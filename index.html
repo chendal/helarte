@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda de Arte</title>
+  <title>ALB'ART</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,10 +30,7 @@
     this.style.display = this.style.display === 'block' ? 'none' : 'block';
   };
 </script>
-
-      <a href="#">Inicio</a>
-      <a href="#">Tienda</a>
-    </nav>
+</nav>
   </header>
 
   <section class="hero">
@@ -42,13 +39,14 @@
   </section>
 
   <section class="gallery">
-    
+
     <div class="item">
       <a href="detalle1.html">
         <img src="https://tse1.mm.bing.net/th?id=OIP.EkImyphDWB0nX_nfqK4fgAHaEK&pid=Api" alt="Alba interior">
       </a>
       <h3>Alba interior</h3>
       <p>320 €</p>
+      <button onclick="agregarAlCarrito('Alba interior', '320 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -57,6 +55,7 @@
       </a>
       <h3>Alba y neblina</h3>
       <p>410 €</p>
+      <button onclick="agregarAlCarrito('Alba y neblina', '410 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -65,6 +64,7 @@
       </a>
       <h3>Claridad de Alba</h3>
       <p>295 €</p>
+      <button onclick="agregarAlCarrito('Claridad de Alba', '295 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -73,6 +73,7 @@
       </a>
       <h3>Sombras del Alba</h3>
       <p>360 €</p>
+      <button onclick="agregarAlCarrito('Sombras del Alba', '360 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -81,6 +82,7 @@
       </a>
       <h3>Alba fragmentada</h3>
       <p>390 €</p>
+      <button onclick="agregarAlCarrito('Alba fragmentada', '390 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -89,6 +91,7 @@
       </a>
       <h3>El eco del Alba</h3>
       <p>450 €</p>
+      <button onclick="agregarAlCarrito('El eco del Alba', '450 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -97,6 +100,7 @@
       </a>
       <h3>Paisaje del Alba</h3>
       <p>310 €</p>
+      <button onclick="agregarAlCarrito('Paisaje del Alba', '310 €')">Añadir al carrito</button>
     </div>
     
     <div class="item">
@@ -105,12 +109,13 @@
       </a>
       <h3>Alba expandida</h3>
       <p>470 €</p>
+      <button onclick="agregarAlCarrito('Alba expandida', '470 €')">Añadir al carrito</button>
     </div>
     
   </section>
 
   <footer>
-    &copy; 2025 Galería Urbana. Esta tienda es ficticia.
+    &copy; 2025 ALB'ART. Esta tienda es ficticia.
   </footer>
 </body>
 </html>
