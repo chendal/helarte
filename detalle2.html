@@ -13,6 +13,27 @@
       <a href="index.html">Inicio</a>
       <a href="#">Tienda</a>
     </nav>
+<div style="position:relative;">
+  <a href="#" onclick="document.querySelector('#carrito-panel').classList.toggle('visible'); return false;">🛒 <span id="carrito-contador">0</span></a>
+  <div id="carrito-panel" style="display:none; position:absolute; top:2em; right:0; background:#fff; border:1px solid #ccc; padding:1em; z-index:10;">
+    <h4>Carrito</h4>
+    <ul id="carrito-lista"></ul>
+  </div>
+</div>
+<script src="carrito.js"></script>
+<script>
+  document.addEventListener('click', function(e) {
+    if (!document.querySelector('#carrito-panel').contains(e.target) &&
+        !e.target.closest('a[href="#"]')) {
+      document.querySelector('#carrito-panel').classList.remove('visible');
+    }
+  });
+  const panel = document.querySelector('#carrito-panel');
+  if (panel) panel.classList.toggle = function (toggle) {
+    this.style.display = this.style.display === 'block' ? 'none' : 'block';
+  };
+</script>
+
   </header>
 
   <section class="detalle">
@@ -21,7 +42,7 @@
       <h2>Alba y neblina</h2>
       <p class="precio">410 €</p>
       <p class="descripcion">Combina la luminosidad del amanecer con la bruma matutina. Las capas translúcidas y los matices grises sugieren la fusión entre la luz naciente y la neblina.</p>
-      <button>Añadir al carrito</button>
+      <button onclick="agregarAlCarrito('Alba y neblina', '410 €')">Añadir al carrito</button>
     </div>
   </section>
 
