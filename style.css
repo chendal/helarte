@@ -59,3 +59,40 @@ footer {
   font-size: 0.8em;
   color: #aaa;
 }
+
+.detalle {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  gap: 2em;
+  justify-content: center;
+}
+.detalle img {
+  max-width: 100%;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+.info {
+  max-width: 400px;
+}
+.precio {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+.descripcion {
+  font-size: 0.95em;
+  color: #555;
+}
+button {
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+button:hover {
+  opacity: 0.9;
+}
