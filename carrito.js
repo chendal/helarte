@@ -39,17 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
   actualizarContador();
   mostrarCarrito();
 
-  const toggle = document.querySelector('#carrito-toggle');
-  const panel = document.querySelector('#carrito-panel');
+  const toggle = document.getElementById('carrito-toggle');
+  const panel = document.getElementById('carrito-panel');
   if (toggle && panel) {
-    toggle.addEventListener('click', (e) => {
+    toggle.addEventListener('click', function (e) {
       e.preventDefault();
-      panel.classList.toggle('visible');
-      panel.style.display = panel.classList.contains('visible') ? 'block' : 'none';
+      panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
     });
-    document.addEventListener('click', (e) => {
-      if (!panel.contains(e.target) && e.target !== toggle) {
-        panel.classList.remove('visible');
+    document.addEventListener('click', function (e) {
+      if (!panel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
         panel.style.display = 'none';
       }
     });
